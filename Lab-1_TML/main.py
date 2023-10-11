@@ -59,8 +59,8 @@ for model_name, model in models.items():
     f1_results_before.append(f1_before)
     log_loss_results_before.append(loss_before)
 
-    # Збільшення порогу для уникнення помилок II роду
-    threshold = 0.8
+    # Зменшення порогу для уникнення помилок II роду
+    threshold = 0.1
     y_pred = (y_pred_proba > threshold).astype(int)
 
     # Розрахунок метрик якості після уникнення помилок II роду
